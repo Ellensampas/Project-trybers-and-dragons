@@ -1,7 +1,8 @@
 import { SimpleFighter } from './Fighter';
 
 export default class Monster implements SimpleFighter {
-  private _lifePoints: number;
+  // refatorando o atributo lifePoints por conta da questao 12
+  protected _lifePoints: number;
   private _strength: number;
 
   constructor() {
@@ -10,11 +11,11 @@ export default class Monster implements SimpleFighter {
   }
 
   get lifePoints(): number {
-    return this.lifePoints;
+    return this._lifePoints;
   }
 
   get strength(): number {
-    return this.strength;
+    return this._strength;
   }
 
   receiveDamage(attackPoints: number): number {
